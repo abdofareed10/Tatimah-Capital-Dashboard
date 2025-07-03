@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login | Tatimah Capital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/css/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&family=DM+Sans:wght@400&family=Work+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="flex flex-col lg:flex-row items-stretch w-full min-h-screen max-w-[1100px] mx-auto p-0 md:p-6 gap-0"
+    >
+      <!-- Left image/illustration (hidden on small, medium, and tablet, show on large and up, keep image fit and not cropped) -->
+      <div class="hidden lg:block w-[52%] min-h-[700px] max-h-[900px] flex-shrink-0 rounded-l-2xl overflow-hidden relative bg-white">
+        <img
+          src="./assets/Images/Placholder Image.png"
+          alt="Man holding laptop"
+          class="w-full h-full object-fit"
+          style="display: block;"
+        />
+      </div>
+      <!-- Logo (with link, above form on mobile, left of form on desktop) -->
+      <a href="https://tatimahcapital.sa/" class="absolute top-4 left-4 z-10 lg:static lg:relative lg:self-start lg:ml-12 lg:mt-12">
+        <img
+      </a>
+        
+      </a>
+
+      <!-- Login form container -->
+      <div
+        class="bg-white w-full max-w-[560px] border border-neutral-200 rounded-lg mx-auto flex flex-col items-center px-4 py-8 md:px-xl md:py-8 md:rounded-lg md:border md:max-w-[590px] h-fit self-center justify-center"
+      >
+      <div class="flex flex-col gap-4 w-full items-center">
+        <!-- logo/btn lang -->
+        <div class="flex flex-row w-full items-center justify-center gap-4">
+          <!-- Logo (larger, clickable, with opacity effect) -->
+          <a 
+            href="https://tatimahcapital.sa/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="transition-opacity duration-200 hover:opacity-70 active:opacity-50"
+            style="display: flex; align-items: center;"
+          >
+            <div
+              class="w-[89px] h-[28px]"
+            >
+              <img
+                src=".//assets/Images/Taitmah_Logo_Priamry.png"
+                alt="Logo"
+                class="h-full w-auto"
+              />
+            </div>
+          </a>
+
+          <!-- Language/Translation Button -->
+          <div class="w-full flex justify-end mb-2">
+            <button
+              id="lang-toggle"
+              type="button"
+              class="flex items-center gap-2 bg-white h-8 rounded-lg shadow-input px-3 font-ibm text-xs text-primary-500 border border-neutral-200 hover:bg-gray-100 active:bg-neutral-200 transition"
+              data-lang="en"
+            >
+              <img
+                src="./assets/Images/Language.svg"
+                alt="Lang"
+                class="w-4 h-4"
+              />
+              <span id="lang-label" class="transition-colors">Arabic</span>
+            </button>
+          </div>
+        </div>
+          <!-- Welcome text -->
+          <div class="flex flex-row items-center gap-2 w-full">
+            <h1
+              id="login-title"
+              class="font-ibm font-semibold text-darkgray text-xl leading-[30px]"
+              data-en="Welcome Back Ali"
+              data-ar="مرحبا بعودتك علي"
+            >
+              Welcome Back Ali
+            </h1>
+            <span
+              class="inline-block bg-center bg-cover w-[26px] h-[26px]"
+              style="background-image: url('./assets/Images/Sparkles.png')"
+            ></span>
+          </div>
+          <p id="login-desc" class="font-ibm text-gray-500 text-sm font-medium leading-[20px] w-full" data-en="Sign in to Continue" data-ar="سجل الدخول للمتابعة">
+            Sign in to Continue
+          </p>
+        </div>
+        <form class="flex flex-col gap-8 w-full mt-6">
+          <!-- Email field -->
+          <div class="flex flex-col gap-1.5 w-full">
+            <label
+              for="email"
+              class="font-ibm font-medium text-black text-sm leading-[20px]"
+              id="email-label"
+              data-en="Email" data-ar="البريد الإلكتروني"
+            >Email <span class="text-[#b42318]">*</span></label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your Email..."
+              class="bg-white border border-neutral-400 rounded-lg h-10 px-2 py-3 w-full text-xs font-dm focus:bg-secondary-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition placeholder:text-gray-400 hover:border-2 hover:border-[#19D7C1]"
+              data-en-placeholder="Your Email..." data-ar-placeholder="بريدك الإلكتروني..."
+            />
+            <!-- Example error state -->
+            <p class="text-[#b42318] text-xs mt-1 hidden" id="email-error">
+              Please enter a valid email address.
+            </p>
+          </div>
+          <!-- Password field -->
+          <div class="flex flex-col gap-1.5 w-full relative">
+            <label
+              for="password" required
+              class="font-ibm font-medium text-black text-sm leading-[20px]"
+              id="password-label"
+              data-en="Password" data-ar="كلمة المرور"
+            >Password <span class="text-[#b42318]">*</span></label
+            >
+            <div class="relative w-full">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                placeholder="Your Password..."
+                class="bg-white border border-neutral-400 rounded-lg h-10 px-2 py-3 w-full text-xs font-dm focus:bg-secondary-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition placeholder:text-gray-400 hover:border-2 hover:border-[#19D7C1] pr-10"
+                data-en-placeholder="Your Password..." data-ar-placeholder="كلمة المرور الخاصة بك..."
+              />
+              <button type="button" id="toggle-password" tabindex="-1" class="absolute inset-y-0 right-2 flex items-center px-1 bg-transparent border-none cursor-pointer" aria-label="Show/Hide password">
+                <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </button>
+            </div>
+            <!-- Example error state -->
+            <p class="text-[#b42318] text-xs mt-1 hidden" id="password-error">
+              Password is required.
+            </p>
+          </div>
+          <!-- Forgot password -->
+          <div class="flex flex-row justify-end w-full">
+            <a
+              href="forgot-password.html"
+              class="font-dm text-primary-500 text-xs hover:text-[#19D7C1] transition duration-150 "
+              id="forgot-link"
+              data-en="Forgot Password ?" data-ar="نسيت كلمة المرور؟"
+            >Forgot Password ?</a
+            >
+          </div>
+          <!-- Login button -->
+          <button
+            type="submit"
+            class="w-full h-12 rounded-lg font-ibm font-semibold text-md shadow-none transition duration-150 bg-[#292852] text-white border-2 border-transparent hover:bg-[#23214a] hover:text-[#19D7C1] hover:border-[#19D7C1] active:bg-[#1a1936] active:text-white active:border-[#19D7C1] focus:outline-none focus:ring-2 focus:ring-[#19D7C1]"
+            id="login-btn"
+            data-en="Login" data-ar="تسجيل الدخول"
+          >
+            Login
+          </button>
+          <!-- Sign up button -->
+          <a
+            href="https://tatimahcapital.sa/%d8%b3%d8%ac%d9%84-%d9%85%d8%b9%d9%86%d8%a7/"
+            target="_blank"
+            class="w-full h-12 rounded-lg flex items-center justify-center font-ibm font-semibold text-md shadow-none transition duration-150 bg-[#19d7c1] text-[#292852] border-2 border-transparent hover:bg-[#15bfae] hover:text-white hover:border-[#19D7C1] active:bg-[#13a89b] active:text-white active:border-[#19D7C1] focus:outline-none focus:ring-2 focus:ring-[#19D7C1]"
+            id="signup-btn"
+            data-en="Sign up" data-ar="إنشاء حساب"
+          >
+            Sign up
+          </a>
+        </form>
+      </div>
+    </div>
+    <script>
+      const langBtn = document.getElementById('lang-toggle');
+      const langLabel = document.getElementById('lang-label');
+      let isArabic = false;
+      langBtn.addEventListener('click', function() {
+        isArabic = !isArabic;
+        document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+        document.body.style.textAlign = isArabic ? 'right' : 'left';
+        langBtn.setAttribute('data-lang', isArabic ? 'ar' : 'en');
+        langLabel.textContent = isArabic ? 'English' : 'Arabic';
+        // Change color on press
+        langLabel.style.color = '#19d7c1';
+        setTimeout(() => { langLabel.style.color = ''; }, 200);
+        // Update all text
+        document.getElementById('login-title').textContent = isArabic ? document.getElementById('login-title').dataset.ar : document.getElementById('login-title').dataset.en;
+        document.getElementById('login-desc').textContent = isArabic ? document.getElementById('login-desc').dataset.ar : document.getElementById('login-desc').dataset.en;
+        document.getElementById('email-label').textContent = isArabic ? document.getElementById('email-label').dataset.ar + ' *' : document.getElementById('email-label').dataset.en + ' *';
+        document.getElementById('email').placeholder = isArabic ? document.getElementById('email').dataset.arPlaceholder : document.getElementById('email').dataset.enPlaceholder;
+        document.getElementById('password-label').textContent = isArabic ? document.getElementById('password-label').dataset.ar + ' *' : document.getElementById('password-label').dataset.en + ' *';
+        document.getElementById('password').placeholder = isArabic ? document.getElementById('password').dataset.arPlaceholder : document.getElementById('password').dataset.enPlaceholder;
+        document.getElementById('forgot-link').textContent = isArabic ? document.getElementById('forgot-link').dataset.ar : document.getElementById('forgot-link').dataset.en;
+        document.getElementById('login-btn').textContent = isArabic ? document.getElementById('login-btn').dataset.ar : document.getElementById('login-btn').dataset.en;
+        document.getElementById('signup-btn').textContent = isArabic ? document.getElementById('signup-btn').dataset.ar : document.getElementById('signup-btn').dataset.en;
+      });
+      // Password show/hide toggle
+      const passwordInput = document.getElementById('password');
+      const togglePassword = document.getElementById('toggle-password');
+      const eyeIcon = document.getElementById('eye-icon');
+      let passwordVisible = false;
+      togglePassword.addEventListener('click', function() {
+        passwordVisible = !passwordVisible;
+        passwordInput.type = passwordVisible ? 'text' : 'password';
+        eyeIcon.innerHTML = passwordVisible
+          ? `<path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.956 9.956 0 012.042-3.368m3.087-2.933A9.956 9.956 0 0112 5c4.477 0 8.268 2.943 9.542 7a9.956 9.956 0 01-4.293 5.411M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18" />`
+          : `<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />`;
+      });
+    </script>
+  </body>
+</html>

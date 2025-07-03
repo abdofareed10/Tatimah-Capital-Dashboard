@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Profile | Tatimah Capital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/css/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&family=DM+Sans:wght@400&family=Work+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F7F8FA] min-h-screen flex flex-col">
+    <div class="flex min-h-screen">
+      <!-- Sidebar (copied from Home.html for consistency) -->
+      <aside
+        id="sidebar"
+        class="w-75 bg-[#111122] border-r border-gray-200 flex flex-col min-h-screen px-6 py-6 transition-all duration-300 ease-in-out"
+        style="background-color: #111122"
+      >
+        <div class="h-16 flex items-center justify-center mb-8">
+          <!-- Logo -->
+          <a
+            href="Home.html"
+            class="block transition-opacity duration-200 hover:opacity-70 active:opacity-50"
+          >
+            <img
+              src="./assets/Images/Logo-secondary.svg"
+              alt="Tatimah Logo"
+              class="h-10"
+            />
+          </a>
+        </div>
+        <nav class="flex-1 flex flex-col gap-2">
+          <!-- Home (selected) -->
+          <a
+            href="Home.html"
+            class="flex items-center py-3 px-4 rounded-lg font-semibold gap-3 text-neutral-400 hover:bg-neutral-200/25 hover:text-primary-500 active:bg-[#19D7C1] active:text-white transition-colors group sidebar-link"
+          >
+            <span
+              class="transition-colors text-primary-500 group-hover:text-primary-500 group-active:text-primary-500"
+            >
+              <svg
+                class="w-5 h-5 fill-current"
+                viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M3.5627 4.36462C2.83895 4.36462 2.2502 4.95337 2.2502
+                5.67712L2.2502 12.8021C2.2502 13.5259 2.83895 14.1146 3.5627
+                14.1146H14.4377C15.1614 14.1146 15.7502 13.5259 15.7502
+                12.8021V5.67712C15.7502 4.95337 15.1614 4.36462 14.4377
+                4.36462L3.5627 4.36462ZM12.9377 6.61462C13.0816 6.61462 13.2255
+                6.66954 13.3354 6.77942C13.5552 6.99917 13.5548 7.35508 13.3354
+                7.57483L10.3354 10.5748C10.1329 10.7773 9.81001 10.7962 9.58614
+                10.6166L8.07881 9.41028L5.4333 11.7255C5.32643 11.8188 5.19432
+                11.8646 5.0627 11.8646C4.90632 11.8646 4.75036 11.7995 4.63936
+                11.672C4.43498 11.4384 4.45847 11.0835 4.69209 10.8788L7.69209
+                8.25378C7.89722 8.07416 8.20164 8.06742 8.41426 8.23767L9.89595
+                9.42346L12.54 6.77942C12.6499 6.66954 12.7938 6.61462 12.9377
+                6.61462ZM1.3127 14.4896C1.23816 14.4886 1.16416 14.5023 1.09499
+                14.5301C1.02582 14.5579 0.962862 14.5992 0.909779
+                14.6515C0.856696 14.7039 0.814545 14.7662 0.785774
+                14.835C0.757003 14.9038 0.742187 14.9776 0.742187
+                15.0521C0.742187 15.1267 0.757003 15.2005 0.785774
+                15.2692C0.814545 15.338 0.856696 15.4004 0.909779
+                15.4527C0.962862 15.5051 1.02582 15.5463 1.09499 15.5741C1.16416
+                15.6019 1.23816 15.6157 1.3127 15.6146L16.6877 15.6146C16.7622
+                15.6157 16.8362 15.6019 16.9054 15.5741C16.9746 15.5463 17.0375
+                15.5051 17.0906 15.4527C17.1437 15.4004 17.1859 15.338 17.2146
+                15.2692C17.2434 15.2005 17.2582 15.1267 17.2582 15.0521C17.2582
+                14.9776 17.2434 14.9038 17.2146 14.835C17.1859 14.7662 17.1437
+                14.7039 17.0906 14.6515C17.0375 14.5992 16.9746 14.5579 16.9054
+                14.5301C16.8362 14.5023 16.7622 14.4886 16.6877 14.4896L1.3127
+                14.4896Z"
+              </svg>
+            </span>
+            <p
+              class="sidebar-text transition-colors text-primary-500 group-hover:text-primary-500 group-active:text-primary-500"
+            >
+              Home
+            </p>
+          </a>
+          <!-- Investments -->
+          <a
+            href="My Investment.html"
+            class="flex items-center py-3 px-4 rounded-lg font-semibold gap-3 bg-transparent text-neutral-400 hover:bg-neutral-200/25 hover:text-primary-500 active:bg-[#19D7C1] active:text-white transition-colors group sidebar-link"
+          >
+            <span
+              class="transition-colors text-neutral-400 group-hover:text-primary-500 group-active:text-white"
+            >
+              <svg
+                class="w-5 h-5 fill-current"
+                viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+              >
+                <path d="M16.5012 11.0022C16.4759 10.9526 16.4402 10.9091
+                16.3967 10.8744C16.3531 10.8398 16.3026 10.8149 16.2486
+                10.8014C16.1946 10.7879 16.1384 10.7861 16.0836 10.7962C16.0289
+                10.8062 15.9769 10.8279 15.9312 10.8597C15.4038 11.2322 14.8029
+                11.4879 14.1687 11.6097C13.611 11.7222 13.0777 11.933 12.5937
+                12.2322C12.318 12.3904 12.0854 12.6141 11.9167 12.8836C11.7479
+                13.1531 11.6482 13.46 11.6262 13.7772C11.6289 13.935 11.6541
+                14.0916 11.7012 14.2422C11.7151 14.2778 11.7167 14.317 11.7059
+                14.3537C11.695 14.3903 11.6723 14.4223 11.6412 14.4447C11.1907
+                14.8086 10.7671 15.2046 10.3737 15.6297C10.3482 15.6563 10.3153
+                15.6747 10.2793 15.6827C10.2433 15.6907 10.2057 15.6879 10.1712
+                15.6747C10.1363 15.6612 10.1062 15.6376 10.0848 15.6068C10.0634
+                15.5761 10.0517 15.5396 10.0512 15.5022L10.0512 12.1722C10.0507
+                12.1272 10.0663 12.0836 10.0952 12.0492C10.1241 12.0147 10.1644
+                11.9919 10.2087 11.9847C11.5791 11.7569 12.8137 11.0222 13.6675
+                9.92636C14.5213 8.83054 14.9318 7.45374 14.8175 6.06929C14.7032
+                4.68483 14.0725 3.39397 13.0507 2.45295C12.0288 1.51194 10.6904
+                0.989578 9.30125 0.989578C7.91209 0.989578 6.57372 1.51194
+                5.55184 2.45295C4.52995 3.39397 3.89927 4.68483 3.78501
+                6.06929C3.67074 7.45374 4.08123 8.83054 4.935 9.92636C5.78878
+                11.0222 7.02339 11.7569 8.39375 11.9847C8.43812 11.9919 8.47842
+                12.0147 8.50733 12.0492C8.53624 12.0836 8.55183 12.1272 8.55125
+                12.1722V14.7672C8.54983 14.8015 8.53937 14.8348 8.52093
+                14.8638C8.50249 14.8928 8.47673 14.9164 8.44625 14.9322C8.41573
+                14.9507 8.38071 14.9605 8.345 14.9605C8.30929 14.9605 8.27427
+                14.9507 8.24375 14.9322C7.80647 14.5652 7.33128 14.2459 6.82625
+                13.9797C6.80504 13.9711 6.78672 13.9567 6.77343 13.9381C6.76015
+                13.9195 6.75245 13.8975 6.75125 13.8747C6.73221 13.5305 6.62845
+                13.1964 6.4492 12.902C6.26995 12.6076 6.02075 12.3621 5.72375
+                12.1872C5.04498 11.8418 4.29258 11.6661 3.53104 11.6752C2.76949
+                11.6844 2.02152 11.8781 1.35125 12.2397C1.30363 12.2694 1.26381
+                12.3102 1.23511 12.3584C1.20641 12.4067 1.18966 12.4611 1.18625
+                12.5172C1.17934 12.5726 1.18597 12.6288 1.20556 12.681C1.22515
+                12.7333 1.25713 12.78 1.29875 12.8172C1.71254 13.2435 2.02749
+                13.7556 2.22125 14.3172C2.40228 14.8038 2.66617 15.2555 3.00125
+                15.6522C3.1822 15.8879 3.42074 16.0731 3.69394 16.19C3.96713
+                16.3069 4.26581 16.3515 4.56125 16.3197C4.82143 16.2668 5.06502
+                16.1519 5.27132 15.9848C5.47762 15.8177 5.64054 15.6032 5.74625
+                15.3597C5.76943 15.3052 5.81312 15.2621 5.86787 15.2396C5.92262
+                15.2172 5.98401 15.2172 6.03875 15.2397C7.07594 15.7254 7.94528
+                16.5086 8.53625 17.4897C8.54719 17.5187 8.54719 17.5507 8.53625
+                17.5797V18.2397C8.53612 18.3414 8.55669 18.4421 8.5967
+                18.5356C8.63672 18.6291 8.69534 18.7136 8.76901 18.7837C8.84267
+                18.8539 8.92984 18.9083 9.02521 18.9437C9.12057 18.9791 9.22215
+                18.9948 9.32375 18.9897C9.46776 18.9971 9.61085 18.9628 9.73589
+                18.891C9.86093 18.8192 9.96261 18.7128 10.0287 18.5847C10.6834
+                17.4339 11.5484 16.4162 12.5787 15.5847C12.5928 15.5709 12.6116
+                15.5632 12.6312 15.5632C12.6509 15.5632 12.6697 15.5709 12.6837
+                15.5847C12.8009 15.809 12.9657 16.0051 13.1664 16.1593C13.3672
+                16.3134 13.5992 16.4219 13.8462 16.4772C14.2159 16.5099 14.5879
+                16.4535 14.9312 16.3125C15.2744 16.1716 15.5788 15.9502 15.8187
+                15.6672C16.2966 15.0005 16.608 14.2292 16.7267 13.4176C16.8455
+                12.606 16.7681 11.7778 16.5012 11.0022ZM7.95125 9.87718C7.85918
+                9.88703 7.76606 9.8774 7.67795 9.84892C7.58984 9.82043 7.50871
+                9.77372 7.43984 9.71183C7.37097 9.64993 7.31589 9.57424 7.27818
+                9.48966C7.24048 9.40509 7.22099 9.31352 7.22099 9.22093C7.22099
+                9.12833 7.24048 9.03676 7.27818 8.95219C7.31589 8.86761 7.37097
+                8.79192 7.43984 8.73002C7.50871 8.66813 7.58984 8.62142 7.67795
+                8.59293C7.76606 8.56445 7.85918 8.55482 7.95125
+                8.56468H9.78125C9.90917 8.56547 10.0333 8.52144 10.1322
+                8.44024C10.231 8.35904 10.2983 8.24579 10.3224 8.12016C10.3464
+                7.99452 10.3257 7.86442 10.2639 7.75245C10.202 7.64048 10.1029
+                7.5537 9.98375 7.50718L8.12375 6.75718C7.74806 6.60571 7.4318
+                6.3362 7.22267 5.98928C7.01355 5.64236 6.92289 5.23686 6.96437
+                4.83391C7.00584 4.43097 7.17721 4.05243 7.45263 3.7554C7.72805
+                3.45836 8.09258 3.25893 8.49125 3.18718C8.64875 3.18718 8.64125
+                3.02218 8.64125 2.91718C8.63139 2.8251 8.64102 2.73199 8.66951
+                2.64388C8.69799 2.55577 8.7447 2.47464 8.8066 2.40577C8.86849
+                2.33689 8.94419 2.28181 9.02876 2.24411C9.11334 2.20641 9.2049
+                2.18692 9.2975 2.18692C9.3901 2.18692 9.48166 2.20641 9.56624
+                2.24411C9.65081 2.28181 9.72651 2.33689 9.7884 2.40577C9.85029
+                2.47464 9.897 2.55577 9.92549 2.64388C9.95398 2.73199 9.96361
+                2.8251 9.95375 2.91718C9.95375 3.08968 10.0362 3.15718 10.1412
+                3.15718H10.6512C10.8132 3.17451 10.963 3.25113 11.0719
+                3.37227C11.1808 3.49342 11.241 3.65055 11.241 3.81343C11.241
+                3.9763 11.1808 4.13343 11.0719 4.25458C10.963 4.37573 10.8132
+                4.45234 10.6512 4.46968H8.83625C8.68905 4.46968 8.54789 4.52815
+                8.4438 4.63223C8.33972 4.73631 8.28125 4.87748 8.28125
+                5.02468C8.28098 5.13448 8.31374 5.24182 8.37526 5.33277C8.43678
+                5.42372 8.52423 5.49406 8.62625 5.53468L10.4862 6.28468C10.8619
+                6.43555 11.1784 6.70442 11.388 7.05077C11.5976 7.39713 11.689
+                7.80222 11.6484 8.20501C11.6077 8.60781 11.4373 8.9865 11.1628
+                9.28404C10.8883 9.58157 10.5245 9.78184 10.1262 9.85468C9.96875
+                9.85468 9.96875 10.0197 9.96875 10.1247C9.97861 10.2167 9.96898
+                10.3099 9.94049 10.398C9.912 10.4861 9.86529 10.5672 9.8034
+                10.6361C9.74151 10.705 9.66581 10.76 9.58124 10.7977C9.49666
+                10.8354 9.4051 10.8549 9.3125 10.8549C9.2199 10.8549 9.12834
+                10.8354 9.04376 10.7977C8.95919 10.76 8.88349 10.705 8.8216
+                10.6361C8.7597 10.5672 8.71299 10.4861 8.68451 10.398C8.65602
+                10.3099 8.64639 10.2167 8.65625 10.1247C8.65625 9.95218 8.58125
+                9.87718 8.46875 9.87718H7.95125Z"
+              </svg>
+            </span>
+            <p
+              class="sidebar-text transition-colors text-neutral-400 group-hover:text-primary-500 group-active:text-white"
+            >
+              Investments
+            </p>
+          </a>
+          <!-- Account -->
+          <a
+            href="profile.html"
+            class="flex items-center py-3 px-4 rounded-lg font-semibold gap-3 text-neutral-400 hover:bg-neutral-200/25 hover:text-primary-500 active:bg-[#19D7C1] active:text-white transition-colors group sidebar-link"
+          >
+            <span
+              class="transition-colors text-white group-hover:text-primary-500 group-active:text-white"
+            >
+              <svg
+                class="w-5 h-5 fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                />
+              </svg>
+            </span>
+            <p
+              class="sidebar-text transition-colors text-white group-hover:text-primary-500 group-active:text-white"
+            >
+              Account
+            </p>
+          </a>
+          <!-- /divider -->
+          <div class="h-0.25 bg-neutral-400 mx-4 my-6"></div>
+          <!-- Logout -->
+          <a
+            id="logoutSidebarBtn"
+            href="#"
+            class="flex items-center py-3 px-4 rounded-lg font-semibold gap-3 bg-transparent text-red-500 hover:bg-[#B42318]/25 hover:text-red-500 active:bg-[#B42318]/10 active:text-red-500 transition-colors group"
+          >
+            <span
+              class="transition-colors text-red-500 group-hover:text-red-500 group-active:text-red-500"
+            >
+              <svg
+                class="w-5 h-5 fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
+                />
+              </svg>
+            </span>
+            <p
+              class="sidebar-text transition-colors text-red-500 group-hover:text-red-500 group-active:text-red-500"
+            >
+              Logout
+            </p>
+          </a>
+        </nav>
+        <!-- User Avatar Section (expanded: full info, collapsed: avatar only) -->
+        <a
+          href="profile.html"
+          class="block user-avatar-section mt-auto mb-4 transition-colors rounded-lg hover:bg-neutral-200/40 active:bg-neutral-200/60"
+        >
+          <div
+            class="flex items-center bg-neutral-200/25 rounded-lg px-3 py-3 gap-3 body-short:bg-transparent body-short:px-0 body-short:py-0 body-short:gap-0 justify-center"
+          >
+            <img
+              src="./assets/Images/Profile_Avatar.png"
+              alt="User Avatar"
+              class="sidebar-avatar-img flex-shrink-0 h-10 w-10 rounded-full object-cover transition-transform duration-150 hover:scale-105 active:scale-95"
+            />
+            <div class="sidebar-text flex-1 body-short:hidden">
+              <div class="text-neutral-100 font-semibold leading-tight text-xs">
+                admin1
+              </div>
+              <div class="text-neutral-400 text-xs">
+                Last Session 3 minutes ago
+              </div>
+            </div>
+          </div>
+        </a>
+      </aside>
+      <!-- Main content -->
+      <div class="flex-1 flex flex-col">
+        <!-- Header -->
+        <header
+          class="h-20 bg-white border-b border-gray-200 flex items-center px-8 justify-between"
+          id="main-header"
+        >
+          <!-- Left: Sidebar Toggle and Avatar -->
+          <div class="flex items-center space-x-4">
+            <button
+              id="sidebarToggle"
+              class="p-2 rounded-full hover:bg-gray-100 transition-colors"
+              onclick="toggleSidebar()"
+            >
+              <svg
+                id="sidebarIcon"
+                class="w-6 h-6 fill-current text-gray-600 transition-transform duration-300"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+              </svg>
+            </button>
+            <div class="flex items-center space-x-3">
+              <img
+                src="./assets/Images/Man Hold Laptop.jpg"
+                alt="User Avatar"
+                class="h-10 w-10 rounded-full object-cover"
+              />
+              <div class="flex flex-col">
+                <p class="text-sm font-medium text-gray-900">Fund Management</p>
+                <p class="text-xs text-gray-500">920013262</p>
+              </div>
+            </div>
+          </div>
+          <!-- Center: Search bar -->
+          <div class="flex-1 flex justify-center">
+            <div
+              class="flex items-center bg-neutral-100 rounded-full px-4 py-2 w-full max-w-md focus-within:bg-white focus-within:ring-2 focus-within:ring-[#19D7C1] focus-within:ring-opacity-50 transition-all duration-200"
+            >
+              <span class="text-neutral-400 mr-2">
+                <svg
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 15 15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.8789 3.85416H8.37891C8.13974 3.85416 7.94141 3.65582 7.94141 3.41666C7.94141 3.17749 8.13974 2.97916 8.37891 2.97916H11.8789C12.1181 2.97916 12.3164 3.17749 12.3164 3.41666C12.3164 3.65582 12.1181 3.85416 11.8789 3.85416Z"
+                  />
+                  <path
+                    d="M10.1289 5.60416H8.37891C8.13974 5.60416 7.94141 5.40582 7.94141 5.16666C7.94141 4.92749 8.13974 4.72916 8.37891 4.72916H10.1289C10.3681 4.72916 10.5664 4.92749 10.5664 5.16666C10.5664 5.40582 10.3681 5.60416 10.1289 5.60416Z"
+                  />
+                  <path
+                    d="M6.92057 13.1875C3.62474 13.1875 0.941406 10.5042 0.941406 7.20832C0.941406 3.91249 3.62474 1.22916 6.92057 1.22916C7.15974 1.22916 7.35807 1.42749 7.35807 1.66666C7.35807 1.90582 7.15974 2.10416 6.92057 2.10416C4.10307 2.10416 1.81641 4.39666 1.81641 7.20832C1.81641 10.02 4.10307 12.3125 6.92057 12.3125C9.73807 12.3125 12.0247 10.02 12.0247 7.20832C12.0247 6.96916 12.2231 6.77082 12.4622 6.77082C12.7014 6.77082 12.8997 6.96916 12.8997 7.20832C12.8997 10.5042 10.2164 13.1875 6.92057 13.1875Z"
+                  />
+                  <path
+                    d="M13.0441 13.7708C12.9333 13.7708 12.8224 13.73 12.7349 13.6425L11.5683 12.4758C11.3991 12.3067 11.3991 12.0267 11.5683 11.8575C11.7374 11.6883 12.0174 11.6883 12.1866 11.8575L13.3533 13.0242C13.5224 13.1933 13.5224 13.4733 13.3533 13.6425C13.2658 13.73 13.1549 13.7708 13.0441 13.7708Z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                placeholder="Search..."
+                class="bg-transparent outline-none flex-1 text-neutral-700 placeholder-neutral-400 focus:placeholder-neutral-300"
+              />
+            </div>
+          </div>
+          <!-- Language Toggle Button -->
+          <div class="flex items-center justify-end ml-4">
+            <button
+              id="lang-toggle"
+              type="button"
+              class="flex items-center gap-2 bg-white h-8 rounded-lg shadow-input px-3 font-ibm text-xs text-primary-500 border border-neutral-200 hover:bg-gray-100 active:bg-neutral-200 transition"
+              data-lang="en"
+            >
+              <img
+                src="./assets/Images/Language.svg"
+                alt="Lang"
+                class="w-4 h-4"
+              />
+              <span id="lang-label" class="transition-colors">Arabic</span>
+            </button>
+          </div>
+        </header>
+        <!-- Main containers -->
+        <main class="flex-1 flex flex-col gap-8 p-6 md:p-10 bg-[#F7F8FA]">
+          <!-- Profile Container -->
+          <section
+            class="bg-white rounded-2xl shadow-card border border-neutral-200 p-8 flex flex-col md:flex-row items-center md:items-start gap-8"
+          >
+            <img
+              src="./assets/Images/Profile_Avatar.png"
+              alt="User"
+              class="w-28 h-28 rounded-full border-4 border-[#19d7c1]"
+            />
+            <div class="flex-1 flex flex-col gap-2">
+              <h2 class="font-ibm font-bold text-2xl text-[#292852]">
+                Mohamed El Kattan
+              </h2>
+              <div class="flex flex-wrap gap-6 mt-2">
+                <div class="flex flex-col text-sm">
+                  <span class="font-semibold text-gray-500">Email</span>
+                  <span class="text-gray-800">mkattan@tatimahcapital.sa</span>
+                </div>
+                <div class="flex flex-col text-sm">
+                  <span class="font-semibold text-gray-500">Phone</span>
+                  <span class="text-gray-800">mkattan@tatimahcapital.sa</span>
+                </div>
+                <div class="flex flex-col text-sm">
+                  <span class="font-semibold text-gray-500">Mobile</span>
+                  <span class="text-gray-800">-</span>
+                </div>
+                <div class="flex flex-col text-sm">
+                  <span class="font-semibold text-gray-500">Authority</span>
+                  <span class="text-gray-800">User</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Settings Container -->
+          <section
+            class="bg-white rounded-2xl shadow-card border border-neutral-200 p-8 flex flex-col gap-6"
+          >
+            <h3 class="font-ibm font-bold text-xl text-[#292852] mb-4">
+              Settings
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- My Profile Card -->
+              <div
+                class="bg-[#E8FCFA] rounded-xl p-6 flex flex-col gap-2 border border-[#19d7c1]/20"
+              >
+                <span class="material-icons text-[#19d7c1] text-3xl mb-2"
+                  >person</span
+                >
+                <span class="font-ibm font-semibold text-[#292852]"
+                  >My Profile</span
+                >
+                <span class="text-xs text-gray-500 mt-2"
+                  >Client File No :
+                  <span class="text-[#19d7c1]">Not specified</span></span
+                >
+                <span class="text-xs text-gray-500"
+                  >Client Invest Account No :
+                  <span class="text-[#19d7c1]">Not specified</span></span
+                >
+              </div>
+              <!-- Bank Account Card -->
+              <div
+                class="bg-[#E8FCFA] rounded-xl p-6 flex flex-col gap-2 border border-[#19d7c1]/20"
+              >
+                <span class="material-icons text-[#19d7c1] text-3xl mb-2"
+                  >account_balance</span
+                >
+                <span class="font-ibm font-semibold text-[#292852]"
+                  >Bank Account</span
+                >
+                <span class="text-xs text-gray-500 mt-2"
+                  >Bank Name:
+                  <span class="text-[#19d7c1]">Not specified</span></span
+                >
+                <span class="text-xs text-gray-500"
+                  >Bank No:
+                  <span class="text-[#19d7c1]">Not specified</span></span
+                >
+              </div>
+              <!-- Account Statement Card -->
+              <div
+                class="bg-[#E8FCFA] rounded-xl p-6 flex flex-col gap-2 border border-[#19d7c1]/20"
+              >
+                <span class="material-icons text-[#19d7c1] text-3xl mb-2"
+                  >receipt_long</span
+                >
+                <span class="font-ibm font-semibold text-[#292852]"
+                  >Account Statement</span
+                >
+              </div>
+              <!-- Reset Password Card -->
+              <div
+                class="bg-[#E8FCFA] rounded-xl p-6 flex flex-col gap-2 border border-[#19d7c1]/20 items-start"
+              >
+                <span class="material-icons text-[#19d7c1] text-3xl mb-2"
+                  >lock_reset</span
+                >
+                <span class="font-ibm font-semibold text-[#292852]"
+                  >Reset Password</span
+                >
+                <button
+                  class="mt-2 px-4 py-2 bg-[#19d7c1] text-white rounded-lg text-xs font-semibold hover:bg-[#13bfae] transition"
+                >
+                  Reset Now
+                </button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Overlay for mobile/tablet sidebar -->
+    <div
+      id="sidebar-overlay"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 199;
+      "
+    ></div>
+    <style>
+      body.short .sidebar-tooltip {
+        display: none;
+      }
+      body.short .sidebar-link:hover .sidebar-tooltip {
+        display: block;
+      }
+      .sidebar-tooltip {
+        display: none;
+        position: absolute;
+        left: 110%;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        color: #23272f;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+        white-space: nowrap;
+        z-index: 100;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        border: 1px solid #f1f1f1;
+      }
+      .sidebar-link:hover .sidebar-tooltip {
+        display: block;
+      }
+      .sidebar-tooltip::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        filter: drop-shadow(-1px 0 1px #f1f1f1);
+      }
+      .collapsed-avatar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px; /* or as needed */
+      }
+      .collapsed-avatar-bg {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 18px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .collapsed-avatar-img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+      }
+      /* Default (expanded) sidebar avatar styling */
+      .user-avatar-section {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+      }
+      .sidebar-avatar-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+      }
+      @media (max-width: 1024px) {
+        #sidebar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 16rem; /* match expanded width */
+          z-index: 200;
+          background: #111122;
+          transform: translateX(-100%);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
+        }
+        #sidebar.open {
+          transform: translateX(0);
+        }
+        #sidebar-overlay {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.25);
+          z-index: 199;
+        }
+        #sidebar.open ~ #sidebar-overlay {
+          display: block;
+        }
+      }
+      /* Collapsed sidebar: avatar only, centered, with border and subtle background */
+      body.short .user-avatar-section {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0 !important;
+        margin-bottom: 1.5rem !important;
+        margin-top: auto !important;
+        background: none !important;
+        border-radius: 0 !important;
+        gap: 0 !important;
+        width: 100%;
+      }
+      body.short .user-avatar-section .flex {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-radius: 18px !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 56px !important;
+        height: 56px !important;
+        margin: 0 auto !important;
+        box-shadow: none !important;
+      }
+      body.short .sidebar-avatar-img {
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 50% !important;
+        border: 3px solid #2de1fc !important; /* or your accent color */
+        background: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+      body.short .user-avatar-section .sidebar-text {
+        display: none !important;
+      }
+      .insights-section {
+        display: flex;
+        gap: 24px;
+        margin: 32px 0 24px 0;
+        flex-wrap: wrap;
+      }
+      .insight-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 24px 32px;
+        min-width: 280px;
+        flex: 1 1 280px;
+        max-width: 400px;
+        cursor: pointer;
+        transition: box-shadow 0.2s, border 0.2s;
+        border: 1.5px solid transparent;
+        outline: none;
+      }
+      .insight-card:hover,
+      .insight-card:focus {
+        box-shadow: 0 8px 24px 0 rgba(25, 215, 193, 0.18);
+        border-bottom: 4px solid #19d7c1;
+      }
+      .insight-card.active {
+        border: 1.5px solid #292852;
+        box-shadow: 0 8px 32px 0 rgba(41, 40, 82, 0.12);
+      }
+      .insight-card-icon {
+        width: 62px;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f7f8fa;
+        border-radius: 12px;
+        flex-shrink: 0;
+      }
+      .insight-card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .insight-card-title {
+        color: #95999d;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+      .insight-card-value {
+        color: #16191d;
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+      }
+      .insight-card-subtext {
+        color: #b0b2b5;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+      }
+      .insight-card-badge {
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 50px;
+        padding: 4px 14px;
+        margin-left: 12px;
+        background: #abefc6;
+        color: #067647;
+        align-self: flex-start;
+      }
+      .insight-card-badge.down {
+        background: #ffe0e0;
+        color: #d92d20;
+      }
+      .insight-card-badge.up {
+        background: #abefc6;
+        color: #067647;
+      }
+      @media (max-width: 900px) {
+        .insights-section {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .insight-card {
+          max-width: 100%;
+          min-width: 0;
+          width: 100%;
+        }
+      }
+    </style>
+    <script>
+      // Highlight active sidebar link based on current page with secondary color
+      document.addEventListener("DOMContentLoaded", function () {
+        var sidebarLinks = document.querySelectorAll("#sidebar .sidebar-link");
+        var current = window.location.pathname.split("/").pop();
+        sidebarLinks.forEach(function (link) {
+          var href = link.getAttribute("href");
+          if (
+            href &&
+            href !== "#" &&
+            current &&
+            href.toLowerCase() === current.toLowerCase()
+          ) {
+            link.classList.add("bg-[#19d7c1]", "text-white", "active");
+            link.classList.remove("bg-[#E6F7F5]", "text-primary-500");
+          } else {
+            link.classList.remove("bg-[#19d7c1]", "text-white", "active");
+          }
+        });
+      });
+    </script>
+    <!-- <div class="no-results-message" style="text-align: center; margin: 48px 0">
+      <img
+        src="./assets/Images/Profile_Avatar.png"
+        alt="No Results"
+        style="width: 96px; margin: 0 auto 24px"
+      />
+      <div style="font-size: 1.5rem; font-weight: 600; margin-bottom: 8px">
+        You do not currently have any investments
+      </div>
+      <div style="color: #888; font-size: 1rem">Start investing with us</div>
+    </div> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var langToggle = document.getElementById("lang-toggle");
+        var langLabel = document.getElementById("lang-label");
+        langToggle.addEventListener("click", function () {
+          var html = document.documentElement;
+          var header = document.getElementById("main-header");
+          if (html.dir === "rtl") {
+            html.dir = "ltr";
+            langToggle.setAttribute("data-lang", "en");
+            langLabel.textContent = "Arabic";
+            header.style.flexDirection = "row";
+          } else {
+            html.dir = "rtl";
+            langToggle.setAttribute("data-lang", "ar");
+            langLabel.textContent = "English";
+            header.style.flexDirection = "row-reverse";
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var html = document.documentElement;
+        var langToggle = document.getElementById("lang-toggle");
+        function updateContentLanguage() {
+          if (html.dir === "rtl") {
+            // Example: update visible text to Arabic
+            document.title = "الملف الشخصي | تاتيمه كابيتال";
+            var el;
+            el = document.querySelector(
+              ".sidebar-text.transition-colors.text-primary-500.group-hover\\:text-primary-500.group-active\\:text-primary-500"
+            );
+            if (el) el.textContent = "الرئيسية";
+            el = document.querySelector(
+              'a[href="My Investment.html"] .sidebar-text'
+            );
+            if (el) el.textContent = "الاستثمارات";
+            el = document.querySelector('a[href="profile.html"] .sidebar-text');
+            if (el) el.textContent = "الملف الشخصي";
+            el = document.querySelector(".text-sm.font-medium.text-gray-900");
+            if (el) el.textContent = "إدارة الصندوق";
+            el = document.querySelector(".text-xs.text-gray-500");
+            if (el) el.textContent = "٩٢٠٠١٣٢٦٢";
+            el = document.querySelector('input[placeholder="Search..."]');
+            if (el) el.placeholder = "بحث...";
+            // Add more as needed
+          } else {
+            // Switch back to English
+            document.title = "User Profile | Tatimah Capital";
+            var el;
+            el = document.querySelector(
+              ".sidebar-text.transition-colors.text-primary-500.group-hover\\:text-primary-500.group-active\\:text-primary-500"
+            );
+            if (el) el.textContent = "Home";
+            el = document.querySelector(
+              'a[href="My Investment.html"] .sidebar-text'
+            );
+            if (el) el.textContent = "Investments";
+            el = document.querySelector('a[href="profile.html"] .sidebar-text');
+            if (el) el.textContent = "Account";
+            el = document.querySelector(".text-sm.font-medium.text-gray-900");
+            if (el) el.textContent = "Fund Management";
+            el = document.querySelector(".text-xs.text-gray-500");
+            if (el) el.textContent = "920013262";
+            el = document.querySelector('input[placeholder="بحث..."]');
+            if (el) el.placeholder = "Search...";
+            // Add more as needed
+          }
+        }
+        // Update on toggle
+        langToggle.addEventListener("click", function () {
+          setTimeout(updateContentLanguage, 100); // Wait for dir change
+        });
+        // Update on page load
+        updateContentLanguage();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forgot Password | Tatimah Capital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/css/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&family=DM+Sans:wght@400&family=Work+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="min-h-screen w-full flex items-center justify-center bg-white">
+      <!-- OTP form container -->
+      <div
+        class="bg-white w-full max-w-[560px] border border-neutral-200 rounded-lg mx-auto flex flex-col items-center px-5 py-4 md:px-xl md:py-4 md:rounded-lg md:max-w-[590px] h-fit self-center justify-center"
+      >
+        <div class="flex flex-col gap-4 w-full items-center">
+          <!-- logo -->
+          <div class="flex flex-row w-full items-center justify-between mb-2">
+          <!-- Logo (larger, clickable, with opacity effect) -->
+          <a 
+            href="https://tatimahcapital.sa/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="transition-opacity duration-200 hover:opacity-70 active:opacity-50"
+            style="display: flex; align-items: center;"
+          >
+            <div
+              class="w-[89px] h-[28px]"
+            >
+              <img
+                src=".//assets/Images/Taitmah_Logo_Priamry.png"
+                alt="Logo"
+                class="h-full w-auto"
+              />
+            </div>
+          </a>
+            <div class="w-full flex justify-end mb-2">
+              <button
+                id="lang-toggle"
+                type="button"
+                class="flex items-center gap-2 bg-white h-8 rounded-lg shadow-input px-3 font-ibm text-xs text-primary-500 border border-neutral-200 hover:bg-gray-100 active:bg-neutral-200 transition"
+                data-lang="en"
+              >
+                <img
+                  src="./assets/Images/Language.svg"
+                  alt="Lang"
+                  class="w-4 h-4"
+                />
+                <span id="lang-label" class="transition-colors">Arabic</span>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col w-full items-center mt-2 mb-4">
+            <h1 class="font-ibm font-bold text-3xl text-darkgray mb-2">
+              Enter OTP <span class="align-middle">✨</span>
+            </h1>
+            <p
+              class="font-ibm text-gray-400 text-lg font-medium w-full text-center"
+            >
+              Go to
+              <span class="text-[#19d7c1] font-semibold"
+                >example@gmaill.com</span
+              >
+              to authenticate your code
+            </p>
+          </div>
+        </div>
+        <form class="flex flex-col gap-8 w-full mt-2 items-center">
+          <div class="flex flex-row gap-4 justify-center w-full mb-2">
+            <input
+              maxlength="1"
+              class="w-20 h-20 text-center text-3xl font-bold border-2 border-neutral-200 rounded-lg focus:border-[#19d7c1] focus:ring-2 focus:ring-[#19d7c1] transition outline-none"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              autocomplete="one-time-code"
+            />
+            <input
+              maxlength="1"
+              class="w-20 h-20 text-center text-3xl font-bold border-2 border-neutral-200 rounded-lg focus:border-[#19d7c1] focus:ring-2 focus:ring-[#19d7c1] transition outline-none"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              autocomplete="one-time-code"
+            />
+            <input
+              maxlength="1"
+              class="w-20 h-20 text-center text-3xl font-bold border-2 border-neutral-200 rounded-lg focus:border-[#19d7c1] focus:ring-2 focus:ring-[#19d7c1] transition outline-none"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              autocomplete="one-time-code"
+            />
+            <input
+              maxlength="1"
+              class="w-20 h-20 text-center text-3xl font-bold border-2 border-neutral-200 rounded-lg focus:border-[#19d7c1] focus:ring-2 focus:ring-[#19d7c1] transition outline-none"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              autocomplete="one-time-code"
+            />
+          </div>
+          <div class="w-full flex flex-row justify-between items-center mb-2">
+            <span class="text-xs text-gray-400 font-ibm">Retry</span>
+          </div>
+          <button
+            type="submit"
+            class="w-full h-14 rounded-lg font-ibm font-semibold text-lg shadow-none transition duration-150 bg-[#292852] text-white border-2 border-transparent hover:bg-[#23214a] hover:text-[#19D7C1] hover:border-[#19D7C1] active:bg-[#1a1936] active:text-white active:border-[#19D7C1] focus:outline-none focus:ring-2 focus:ring-[#19D7C1]"
+          >
+            Reset
+          </button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const langBtn = document.getElementById("lang-toggle");
+      const langLabel = document.getElementById("lang-label");
+      let isArabic = false;
+      langBtn.addEventListener("click", function () {
+        isArabic = !isArabic;
+        document.documentElement.dir = isArabic ? "rtl" : "ltr";
+        document.body.style.textAlign = isArabic ? "right" : "left";
+        langBtn.setAttribute("data-lang", isArabic ? "ar" : "en");
+        langLabel.textContent = isArabic ? "English" : "Arabic";
+        // Change color on press
+        langLabel.style.color = "#19d7c1";
+        setTimeout(() => {
+          langLabel.style.color = "";
+        }, 200);
+        // Update all text
+        document.getElementById("forgot-title").textContent = isArabic
+          ? document.getElementById("forgot-title").dataset.ar
+          : document.getElementById("forgot-title").dataset.en;
+        document.getElementById("forgot-desc").textContent = isArabic
+          ? document.getElementById("forgot-desc").dataset.ar
+          : document.getElementById("forgot-desc").dataset.en;
+        document.getElementById("email-label").textContent = isArabic
+          ? document.getElementById("email-label").dataset.ar + " *"
+          : document.getElementById("email-label").dataset.en + " *";
+        document.getElementById("email").placeholder = isArabic
+          ? document.getElementById("email").dataset.arPlaceholder
+          : document.getElementById("email").dataset.enPlaceholder;
+        document.getElementById("forgot-btn").textContent = isArabic
+          ? document.getElementById("forgot-btn").dataset.ar
+          : document.getElementById("forgot-btn").dataset.en;
+        document.getElementById("back-btn").textContent = isArabic
+          ? document.getElementById("back-btn").dataset.ar
+          : document.getElementById("back-btn").dataset.en;
+      });
+    </script>
+</html>
